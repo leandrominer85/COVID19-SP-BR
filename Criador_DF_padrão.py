@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd
@@ -43,8 +43,14 @@ def criador_df(files):
         if "jul" in i:
             colunas_jul.append(i.rpartition('\\')[2].replace(".xlsx", ""))
     
+
+    colunas_ago=[]
+    for i in files:
+        if "ago" in i:
+            colunas_ago.append(i.rpartition('\\')[2].replace(".xlsx", ""))
     
-    colunas = colunas_mar+colunas_abr+colunas_mai+colunas_jun+colunas_jul
+    colunas = colunas_mar+colunas_abr+colunas_mai+colunas_jun+colunas_jul+colunas_ago
+
 
 
 
